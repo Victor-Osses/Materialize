@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.css"  media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Components (Navbar, Navside and Dropdown)</title>
+</head>
+<body>
+    <!-- Para deixar a navbar fixa: basta envolver a nav em uma div com a classe "navbar-fixed" -->
+     <nav class="z-depth-0">
+
+        <div class="nav-wrapper container">
+
+          <a href="#" class="brand-logo left">Logo</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
+
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li class="active"><a href="#">Sass</a></li>
+            <li>
+                <a class="dropdown-trigger" data-beloworigin="true" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a>
+            </li>
+            <li><a class="btn waves-effect waves-light" href="#">JavaScript</a></li>
+          </ul>
+
+        </div>
+
+      </nav>
+
+      <!-- Dropdown -->
+      <ul id="dropdown1" class="dropdown-content">
+          <li><a href="#!">one</a></li>
+          <li><a href="#!">two</a></li>
+          <li><a href="#!">three</a></li>
+      </ul>
+    
+
+      <!-- Menu mobile -->
+      <!-- O valor do ID deve ser igual ao valor do data-activates do icone de menu mobile -->
+      <!-- Para o menu mobile funcionar, é necessário inicilizar um JS -->
+        <ul id="mobile-demo" class="sidenav">
+            <li class="active"><a href="sass.html">Sass</a></li>
+            <li><a href="badges.html">Components</a></li>
+            <li><a href="collapsible.html">JavaScript</a></li>
+        </ul>
+
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+
+    <!-- Menu Mobile -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var sideNav = document.querySelectorAll('.sidenav');
+            var instancesSidenav = M.Sidenav.init(sideNav);
+
+            var dropdown = document.querySelectorAll('.dropdown-trigger');
+            var instancesDropdown = M.Dropdown.init(dropdown);
+        });
+
+        
+    </script>
+
+</body>
+</html>

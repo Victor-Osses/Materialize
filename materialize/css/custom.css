@@ -1,0 +1,3 @@
+/*Nesse arquivo, customiza-se tudo o que eu quero que seja diferente do padrão do framework*/
+.tipografia {font-family:  Georgia;}
+p {font-weight: 100;}
